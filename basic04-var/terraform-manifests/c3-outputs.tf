@@ -10,5 +10,5 @@ output "instance_id"{
 
 output "instance_publicdns"{
     description = "EC2 Instance Public DNS with Splat"
-    value = aws_instance.ec2demo[*].public_dns}
+    value = aws_instance.ec2demo[*].public_dns
 }
