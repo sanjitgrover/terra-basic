@@ -7,9 +7,9 @@ output "ec2_bastion_public_ip"{
 }
 
 output "ec2_private_ids"{
-    value = module.ec2_private.id
+    value = [ for ec2p in module.ec2_private: ec2p.id ]
 }
 
 output "ec2_private_ip"{
-    value = module.ec2_private.private_ip
+    value =  [ for ec2p in module.ec2_private: ec2p.private_ip]
 }

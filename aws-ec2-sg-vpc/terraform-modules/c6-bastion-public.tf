@@ -11,8 +11,8 @@ module "ec2_public" {
   key_name               = var.instance_keypair
 #   monitoring             = true
   vpc_security_group_ids = [module.public_bastion_sg.security_group_id]
-  subnet_ids              = [module.vpc.private_subnets[0], module.vpc.private_subnets[1]]
-  user_data = file("${path.module}/app1-install.sh")
-  instance_count = var.private_instance_count    
+  subnet_id              = module.vpc.public_subnets[0]
+ 
+      
   tags = local.common_tags
 }
