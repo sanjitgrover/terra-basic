@@ -5,11 +5,18 @@ variable "aws_region"{
     type = string
 }
 
-# EC2 Instance Type
+# Environment
+variable "environment"{
+    type = string
+    default = "dev"
+}
 
     
-# Key value Pair
-
+# Business Division
+variable "business_division"{
+    type = string
+    default = "HR"
+}
 
 
 
