@@ -21,10 +21,10 @@ resource "null_resource" "name" {
         
     }
     
-    provisioner "local-exec" {
-        command = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
-        working_dir = "local-exec-output-files"
-        on_failure = continue
-        //when = destroy
-    }
+    # provisioner "local-exec" {
+    #     command = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
+    #     working_dir = "local-exec-output-files"
+    #     # on_failure = continue
+    #     when = destroy
+    # }
 }
