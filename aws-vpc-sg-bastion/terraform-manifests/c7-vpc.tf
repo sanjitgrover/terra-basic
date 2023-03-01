@@ -17,15 +17,15 @@ module "vpc" {
  enable_dns_hostnames = true
  enable_dns_support = true
  
- public_subnet_tags {
+ public_subnet_tags = {
      Type = "Public Subnets"
  }
  
-  private_subnet_tags {
+  private_subnet_tags = {
      Type = "Private Subnets"
  }
  
- database_subnet_tags {
+ database_subnet_tags = {
      Type = "Database Subnets"
  }
  tags = local.common_tags

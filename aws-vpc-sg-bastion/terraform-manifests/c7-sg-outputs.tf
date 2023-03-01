@@ -24,7 +24,7 @@ output "private_sg_id" {
 }
 
 output "private_sg_vpc_id" {
-  description = "The VPC ID"
+  description = "SG VPC ID"
   value       = "${module.private_sg.this_security_group_vpc_id}"
 }
 

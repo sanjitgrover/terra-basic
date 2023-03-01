@@ -15,7 +15,7 @@ output "public_subnets"{
 }
 
 output "nat_public_ips"{
-    value = module.vpcnat_public_ips
+    value = module.vpc.nat_public_ips
 }
 
 output "azs" {
